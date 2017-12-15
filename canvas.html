@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas绘制图形</title>
+		
+		<style>
+			canvas{
+				border: solid 1px #666;
+				background: #F5F5F5;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<canvas id="myCanvas" width="300" height="300">
+			你的浏览器不支持canvas
+		</canvas>
+	</body>
+	
+	<script type="text/javascript" src="jquery.js"></script>
+	
+	<script>
+		
+		//获取画布
+		var canvas = document.querySelector('#myCanvas');
+		
+		//画笔
+		var cvs = canvas.getContext('2d');
+		
+		//绘制图形
+		cvs.rect(0,0,100,100);
+		
+		//设置填充颜色
+		cvs.fillStyle = 'red';
+		
+		//描边
+		cvs.stroke();
+		
+		//填充，将图形填充到画布上
+		cvs.fill();
+		
+		//清除绘制某个区域
+		cvs.clearRect(25,25,50,50);
+		
+		
+	</script>
+</html>
